@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listPhotoMarsFragment">
+
+    <fragment
+        android:id="@+id/listPhotoMarsFragment"
+        android:name="com.example.photofrommars.presentation.listPhotoMars.ListPhotoMarsFragment"
+        android:label="ListPhotoMarsFragment"
+        tools:layout="@layout/fragment_list_photo_mars">
+        <action
+            android:id="@+id/action_listPhotoMarsFragment_to_photoViewFragment"
+            app:destination="@id/photoViewFragment"
+            app:popUpTo="@id/listPhotoMarsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoViewFragment"
+        android:name="com.example.photofrommars.presentation.viewPhoto.PhotoViewFragment"
+        android:label="fragment_photo_view"
+        tools:layout="@layout/fragment_photo_view" />
+</navigation>
