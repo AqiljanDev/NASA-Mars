@@ -39,6 +39,9 @@ android {
 }
 
 dependencies {
+    implementation project(path: ':domain')
+    implementation project(path: ':data')
+
     def hilt_version = "2.44"
     def lifecycle_version = "2.6.2"
     def coroutines_version = "1.7.3"
@@ -46,16 +49,12 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:2.7.6"
     implementation "androidx.navigation:navigation-ui-ktx:2.7.6"
 
-    // Retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
 
     // Paging Layout
     implementation 'androidx.paging:paging-runtime-ktx:3.2.1'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
-
-    // Glide
-    implementation 'com.github.bumptech.glide:glide:4.16.0'
 
     // Hilt
     implementation "com.google.dagger:hilt-android:$hilt_version"

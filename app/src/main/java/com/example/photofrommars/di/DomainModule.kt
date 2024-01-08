@@ -1,7 +1,7 @@
 package com.example.photofrommars.di
 
-import com.example.photofrommars.domain.repository.PhotoMarsRepository
-import com.example.photofrommars.domain.useCase.GetMarsPhotoCuriosityUseCase
+import com.example.cleancode.domain.repository.PhotoMarsRepository
+import com.example.cleancode.domain.useCase.GetMarsPhotoCuriosityUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

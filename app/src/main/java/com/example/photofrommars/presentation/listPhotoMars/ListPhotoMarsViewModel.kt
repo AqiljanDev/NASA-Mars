@@ -1,12 +1,11 @@
 package com.example.photofrommars.presentation.listPhotoMars
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
-import com.example.photofrommars.domain.useCase.GetMarsPhotoCuriosityUseCase
-import com.example.photofrommars.entity.Photo
+import com.example.cleancode.domain.useCase.GetMarsPhotoCuriosityUseCase
+import com.example.cleancode.domain.entity.Photo
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -26,10 +25,9 @@ class ListPhotoMarsViewModel @Inject constructor(
 
     fun getListPhotoMars() {
         viewModelScope.launch {
-            getMarsPhotoCuriosityUseCase.execute()
+            getMarsPhotoCuriosityUseCase.execute().flow
                 .cachedIn(viewModelScope)
                 .collect{
-                    Log.d("Mylog", "get list photo mars = $it")
                     _listPhotoMars.value = it
                 }
         }

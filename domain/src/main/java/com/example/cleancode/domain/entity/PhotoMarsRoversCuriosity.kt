@@ -1,4 +1,4 @@
-package com.example.photofrommars.entity
+package com.example.cleancode.domain.entity
 
 interface PhotoMarsRoversCuriosity {
     val photos: List<Photo>

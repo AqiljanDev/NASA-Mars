@@ -8,11 +8,11 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.photofrommars.databinding.PhotoMarsInfoViewGroupBinding
-import com.example.photofrommars.entity.Photo
+import com.example.cleancode.domain.entity.Photo
 
 class PhotoMarsAdapter(
     private val onClick: (String) -> Unit
-) : PagingDataAdapter<Photo, PhotoMarsInfoViewHolder>(DiffUtilCallback()) {
+) : PagingDataAdapter<com.example.cleancode.domain.entity.Photo, PhotoMarsInfoViewHolder>(DiffUtilCallback()) {
     override fun onBindViewHolder(holder: PhotoMarsInfoViewHolder, position: Int) {
         val item = getItem(position)
         Log.d("Mylog", "OnBINDvIEWhOLDER = ${item?.img_src}")
@@ -45,15 +45,15 @@ class PhotoMarsAdapter(
 class PhotoMarsInfoViewHolder(val binding: PhotoMarsInfoViewGroupBinding) :
     RecyclerView.ViewHolder(binding.root)
 
-class DiffUtilCallback() : DiffUtil.ItemCallback<Photo>() {
+class DiffUtilCallback() : DiffUtil.ItemCallback<com.example.cleancode.domain.entity.Photo>() {
     override fun areItemsTheSame(
-        oldItem: Photo,
-        newItem: Photo
+        oldItem: com.example.cleancode.domain.entity.Photo,
+        newItem: com.example.cleancode.domain.entity.Photo
     ): Boolean = oldItem.id == newItem.id
 
     override fun areContentsTheSame(
-        oldItem: Photo,
-        newItem: Photo
+        oldItem: com.example.cleancode.domain.entity.Photo,
+        newItem: com.example.cleancode.domain.entity.Photo
     ): Boolean = oldItem.img_src == newItem.img_src
 
 }

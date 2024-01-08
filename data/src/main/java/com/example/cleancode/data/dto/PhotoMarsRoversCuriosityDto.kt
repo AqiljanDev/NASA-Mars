@@ -1,11 +1,10 @@
-package com.example.photofrommars.data.dto
+package com.example.cleancode.data.dto
 
-import com.example.photofrommars.entity.Camera
-import com.example.photofrommars.entity.CamerasRover
-import com.example.photofrommars.entity.Photo
-import com.example.photofrommars.entity.PhotoMarsRoversCuriosity
-import com.example.photofrommars.entity.Rover
-import javax.inject.Inject
+import com.example.cleancode.domain.entity.Camera
+import com.example.cleancode.domain.entity.CamerasRover
+import com.example.cleancode.domain.entity.Photo
+import com.example.cleancode.domain.entity.PhotoMarsRoversCuriosity
+import com.example.cleancode.domain.entity.Rover
 
 class PhotoMarsRoversCuriosityDto (
     override val photos: List<PhotoDto>

@@ -15,9 +15,6 @@ import com.example.photofrommars.databinding.FragmentPhotoViewBinding
 
 class PhotoViewFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = PhotoViewFragment()
-    }
     private var _binding: FragmentPhotoViewBinding? = null
     private val binding get() = _binding!!
 
